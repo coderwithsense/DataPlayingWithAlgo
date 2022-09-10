@@ -2,20 +2,12 @@ class Solution {
 public:
     string firstPalindrome(vector<string>& words) {
         for(int i=0;i<words.size();i++){
-            string s=words[i];
-            int n=s.size()-1;
-            int flag=0, a=0, j=n;
-            while(a<=j){
-                if(s[a]!=s[j]){
-                    flag=1;
-                }
-                a++;
-                j--;
+            string temp=words[i];
+            string res=temp;
+            reverse(res.begin(), res.end());
+            if(res == temp){
+                return temp;
             }
-            if(flag==0){
-                return s;
-            }
-            flag=0;
         }
         return "";
     }
