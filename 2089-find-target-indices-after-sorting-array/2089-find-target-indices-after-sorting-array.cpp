@@ -8,6 +8,7 @@ public:
             if(nums[i] == target){
                 ans.push_back(i);
             }
+            if(nums[i] > target) break;
         }
         return ans;
     }
