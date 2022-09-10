@@ -13,7 +13,7 @@ public:
         long long s=0, e=n;
         int ans = 0;
         
-        while(s<=e){
+        while(true){
             long long mid = (s+e)/2;
             int guesskro = guess(mid);
             if(guesskro == -1){
